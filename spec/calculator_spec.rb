@@ -13,4 +13,9 @@ describe Calculator do
     calculator = Calculator.new
     expect(calculator.evaluate('4 * 5')).to eq(20)
   end
+
+  it 'subtracts number when given a subtraction operator within the string' do
+    calculator = Calculator.new
+    expect(calculator.evaluate('4 - 5')).to eq(-1)
+  end
 end
