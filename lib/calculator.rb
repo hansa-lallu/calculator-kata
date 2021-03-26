@@ -2,7 +2,9 @@
 
 class Calculator
   def evaluate(string)
-    array = string.split(' ').select.with_index { |_num, idx| idx.even? }.map(&:to_i)
-    array = array.inject(:+)
+    ['+', '*'].each do |operator|
+      return string.split(operator).map { |x| evaluate(x) }.inject(operator) if string.include?(operator)
+    end
+    string.to_i
   end
 end
