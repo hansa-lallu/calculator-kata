@@ -23,4 +23,10 @@ describe Calculator do
     calculator = Calculator.new
     expect(calculator.evaluate('4 / 5')).to eq(0.8)
   end
+
+  it 'follows mathematics principle and orders correctly' do
+    calculator = Calculator.new
+    expect(calculator.evaluate('4 + 5 * 6')).to eq(34)
+    expect(calculator.evaluate('2 / 2 + 3 * 4 - 6')).to eq(7)
+  end
 end
