@@ -18,4 +18,9 @@ describe Calculator do
     calculator = Calculator.new
     expect(calculator.evaluate('4 - 5')).to eq(-1)
   end
+
+  it 'divides number when given a divider operator within the string' do
+    calculator = Calculator.new
+    expect(calculator.evaluate('4 / 5')).to eq(0.8)
+  end
 end
